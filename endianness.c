@@ -65,6 +65,8 @@
 	#define letohs(x) x
 	#define letohl(x) x
 	#define letohll(x) x
+#else
+	#error "wtf ?"
 #endif
 
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
@@ -133,5 +135,5 @@
 	#define betohl(x) x
 	#define betohll(x) x
 #else
-	#error "wtf"
+	#error "wtf !"
 #endif
