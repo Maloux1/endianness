@@ -59,17 +59,6 @@
 		return y;
 	}
 #elif __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-	#define htoles(x) x
-	#define htolel(x) x
-	#define htolell(x) x
-	#define letohs(x) x
-	#define letohl(x) x
-	#define letohll(x) x
-#else
-	#error "wtf ?"
-#endif
-
-#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
 	uint16_t htobes(uint16_t x){
 		uint16_t y = 0;
 		y |= (x & 0x00ff) << 8;
@@ -127,13 +116,6 @@
 		y |= (x & 0xff00000000000000) >> 56;
 		return y;
 	}
-#elif __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
-	#define htobes(x) x
-	#define htobel(x) x
-	#define htobell(x) x
-	#define betohs(x) x
-	#define betohl(x) x
-	#define betohll(x) x
 #else
 	#error "wtf !"
 #endif
