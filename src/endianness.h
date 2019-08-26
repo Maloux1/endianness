@@ -1,6 +1,8 @@
 #ifndef ENDIANNESS_H
 #define ENDIANNESS_H
 
+#include "config.h"
+
 #include <stdint.h>
 
 /*

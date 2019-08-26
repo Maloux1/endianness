@@ -1,3 +1,15 @@
 clean
 aclocal.m4
 autom4te.cache
+src/config.h
+src/stamp-h1
+src/Makefile
+src/.deps/
+libtool
+config.status
+config.log
+Makefile
+src/.libs
+src/*.lo
+src/*.o
+src/*.la
