@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rm -rf aclocal.m4 autom4te.cache/ config.log ar-lib config.status install-sh Makefile.in compile depcomp Makefile missing src/*.o src/libendianness.a src/Makefile src/Makefile.in src/.deps/ configure config.guess config.sub ltmain.sh src/*.lo src/*.la libtool src/.libs src/config.h src/config.h.in src/stamp-h1
