@@ -1,3 +1,4 @@
+#include "config.h"
 #include "endianness.h"
 
 #if __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
