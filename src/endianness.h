@@ -12,13 +12,19 @@
 	l:long
 	ll:long long
 */
+
+uint16_t static swaps(uint16_t x);
+uint32_t static swapl(uint32_t x);
+uint64_t static swapll(uint64_t x);
+
+
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-	uint16_t htobes(uint16_t x);
-	uint32_t htobel(uint32_t x);
-	uint64_t htobell(uint64_t x);
-	uint16_t betohs(uint16_t x);
-	uint32_t betohl(uint32_t x);
-	uint64_t betohll(uint64_t x);
+	#define htobes(x) swaps(x)
+	#define htobel(x) swapl(x)
+	#define htobell(x) swapll(x)
+	#define betohs(x) swaps(x)
+	#define betohl(x) swapl(x)
+	#define betohll(x) swapll(x)
 	#define htoles(x) x
 	#define htolel(x) x
 	#define htolell(x) x
@@ -26,12 +32,12 @@
 	#define letohl(x) x
 	#define letohll(x) x
 #elif __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
-	uint16_t htoles(uint16_t x);
-	uint32_t htolel(uint32_t x);
-	uint64_t htolell(uint64_t x);
-	uint16_t letohs(uint16_t x);
-	uint32_t letohl(uint32_t x);
-	uint64_t letohll(uint64_t x);
+	#define htoles(x) swaps(x)
+	#define htolel(x) swapl(x)
+	#define htolell(x) swapll(x)
+	#define letohs(x) swaps(x)
+	#define letohl(x) swapl(x)
+	#define letohll(x) swapll(x)
 	#define htobes(x) x
 	#define htobel(x) x
 	#define htobell(x) x
