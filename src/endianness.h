@@ -13,9 +13,9 @@
 	ll:long long
 */
 
-uint16_t static swaps(uint16_t x);
-uint32_t static swapl(uint32_t x);
-uint64_t static swapll(uint64_t x);
+uint16_t swaps(uint16_t x);
+uint32_t swapl(uint32_t x);
+uint64_t swapll(uint64_t x);
 
 
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
